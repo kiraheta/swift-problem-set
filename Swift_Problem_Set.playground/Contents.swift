@@ -45,7 +45,7 @@ let bestProgrammingLanguage: String = myFirstProgrammingLanguage
 
 let stringToReverse = "Mutable or Immutable? That is the question."
 let arrayOfCharacters = stringToReverse.characters.reversed()
-var reversedArrayOfCharacters = String(arrayOfCharacters)
+let reversedArrayOfCharacters = String(arrayOfCharacters)
 
 /*
  Exercise 4
@@ -191,8 +191,11 @@ func release() {
     print("Game is ready to be released.")
 }
 
+let MAX_BUGS_ALLOWED: Int = 10
+let MIN_LEVELS_ALLOWED: Int = 5
+
 func checkForRelease(bugs: Int, music: Bool, levels: Int) {
-    if bugs < 10 && music==true && levels > 5 {
+    if bugs < MAX_BUGS_ALLOWED && music==true && levels > MIN_LEVELS_ALLOWED {
         release()
     } else {
         if bugs > 9 {
@@ -266,7 +269,6 @@ var canFinishBike: Bool = true
 var canFinishRun: Bool = true
 
 func checkTrainingStatus(name: String, bike: Bool, run: Bool) {
-    //TODO: Add your if, else-if statement here!
     if canFinishBike && canFinishRun {
         print("\(name) is ready!")
     } else {
@@ -330,12 +332,13 @@ emojiLove(str1: name1, str2: name2)
  */
 
 func median (x: Int, y: Int, z: Int) -> Int {
-    var numbers = [Int]()
-    numbers.append(x)
-    numbers.append(y)
-    numbers.append(z)
-    numbers.sort()
-    return numbers[1]
+//    var numbers = [Int]()
+//    numbers.append(x)
+//    numbers.append(y)
+//    numbers.append(z)
+//    numbers.sort()
+//    return numbers[1]
+    return [x, y, z].sorted()[1]
 }
 // Test case: Median is 7
 print("--Test case: Median is 7")
